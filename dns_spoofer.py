@@ -18,7 +18,7 @@ def process_packet(packet):
     scapy_pack=scapy_packet_worker(packet)
     if scapy_pack:
         packet.set_payload(str(scapy_pack))
-        print("[+]Spoofed to 10.0.2.5")
+        print("[+]Spoofed to "+spoof_domain)
     packet.accept()
 
 def scapy_packet_worker(packet):
